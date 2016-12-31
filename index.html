@@ -1,0 +1,271 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/my.css" rel="stylesheet">
+	<script src="js/jquery.min.js"></script>
+	<script type="text/javascript" src="js/move-top.js"></script>
+	<script type="text/javascript" src="js/easing.js"></script>
+	<script type="text/javascript">
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event){		
+				event.preventDefault();
+				$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+			});
+			$(".lan-choocer").click(function(event){
+				var lang = "ch";
+				if($(event.target).text() == "English") lang ="en";
+				$('.i18n').each(function() {
+    				$(this).text($(this).data(lang));
+  				});
+			})
+		});
+	</script>
+	<title>ChenugRay's Page</title>
+</head>
+<body>
+<!--//banner-->
+<div id="home" class="banner">
+	<div class="banner-info">
+		<div class="switcher"> </div>
+		<div class="dropdown switcher">
+			<button class="btn btn-sm dropdown-toggle i18n" data-toggle="dropdown" id="dropdownMenu1" type="button" data-en="选择语言▼" data-ch="language▼">
+			</button>
+			<ul aria-labelledby="dropdownMenu" class="dropdown-menu" role="menu">
+			<li role="presentation"><a class="lan-choocer" href="#" role="menuitem" tabindex="-1">中文</a></li>
+			<li role="presentation"><a class="lan-choocer" href="#" role="menuitem" tabindex="-1">English</a></li>
+			</ul>
+	</div>
+		<div class="clearfix"></div>
+		<div class="container">
+			<div class="col-md-4 header-left">
+				<img src="img/self.png">
+			</div>
+			<div class="col-md-8 header-right">
+				<h2>"Hello"</h2>
+				<h1>I'm ChenugRay</h1>
+				<h6>Software Developer</h6>
+				<ul class="address">
+					<li>
+						<ul class="address-text">
+							<li>
+								<b class="i18n" data-en="D.O.B" data-ch="生日"><!--D.O.B--></b>
+							</li>
+							<li>15-03-1992</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="address-text">
+							<li>
+								<b class="i18n" data-en="TEL" data-ch="手机"></b>
+							</li>
+							<li>+87 18752033217</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="address-text">
+							<li>
+								<b class="i18n" data-en="ADDRESS" data-ch="地址"></b>
+							</li>
+							<li class="i18n" data-en="No.66, XinMoFan Road" data-ch="南京邮电大学新模范马路66号"></li>
+						</ul>
+					</li>
+					<li>
+						<ul class="address-text">
+							<li>
+								<b class="i18n" data-en="E-MAIL" data-ch="电邮"></b>
+							</li>
+							<li>chenugray@163.com</li>
+						</ul>
+					</li>
+					<li>
+						<ul class="address-text">
+							<li>
+								<b class="i18n" data-en="AGE" data-ch="年龄"></b>
+							</li>
+							<li>24</li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+<!--//banner-->
+<!--top-nav-->
+	<div class="top-nav wow">
+		<div class="container">
+			<div class="navbar-header logo">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+				</button>
+			</div>
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<div class="menu">
+					<ul class="nav navbar">
+						<li><a href="#about" class="scroll i18n" data-en="About" data-ch="这就是我"></a></li>
+						<li><a href="#work" class="scroll i18n" data-en="Exprience" data-ch="项目经验"></a></li>
+						<li><a href="#education" class="scroll i18n" data-en="Education" data-ch="教育经历"></a></li>
+						<li><a href="#skills" class="scroll i18n" data-en="Skills" data-ch="掌握技能"></a></li>
+					</ul>
+					<div class="clearfix"> </div>
+				</div>
+			</div>
+		</div>
+	</div>	
+	<!--//top-nav-->
+<!--about-->
+	<div id="about" class="about">
+		<div class="container">
+			<h3 class="title i18n" data-en="About Me" data-ch="这就是我"></h3>
+			<div class="col-md-8 about-left">
+				<p class="i18n" data-en="Good at learning new knowledge, willing to participate in teamwork, glad to overcome hard problem,responsible for the work, strong passion for computer skills." data-ch="善于学习新知识，乐于参与团队合作，勇于克服困难， 对事业工作负责。"></p>
+				<p class="i18n" data-en="I'm ChenugRay, a 24-year-old graduating student. Long for work and discovery world. Have strong confidence in future life. I'm a open-minded, wiling and have broad interests like music, reading, and software programing. Major in software engineering, have solid basic knowledge in software development and unit test.Advocating automatic programming, liking to write some scripts to simplify working.Have a certain understanding of Web Development and Deployment. I'm living a simple life, and enjoy it. For me, technology is to simplify the daily life and make life beautiful." data-ch="我叫张磊，应届毕业生。渴求工作和探索世界。对未来的工作和生活有强烈的信心。自信达观，乐于助人，兴趣广泛。主修软件工程专业，具有坚实软件开发单元测试基础。崇尚自动化编程，经常写些脚本来简化工作。对于Web开发和部署有一定的了解。极简风格爱好者。对于我来说，科技让生活更美好。"> 
+				</p>
+			</div>
+			<div class="col-md-4 about-right">
+				<ul>
+					<h5>Awards</h5>
+					<li><span class="glyphicon glyphicon-menu-right"></span><span class="i18n" data-en="1st in entrance examination for postgraduate in NanJing University of Telecommunication and Post." data-ch="南邮研究生入学考试第一">
+					</span></li>
+					<li><span class="glyphicon glyphicon-menu-right"></span><span class="i18n" data-en="Got scholarships several times in college." data-ch="大学期间多次获得奖学金"> </span></li>
+					<li><span class="glyphicon glyphicon-menu-right"></span><span class="i18n"  data-en="Got scholarships several times during graduate school." data-ch="研究生期间多次获得奖学金"> </span></li>
+				</ul>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+	<!--//about-->
+	<!--project-experience-->
+	<div id="work" class="work">
+		<div class="container">
+			<h3 class="title i18n" data-en="Exprience" data-ch="项目经验"></h3>
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4>2015 - 2016 </h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon glyphicon-briefcase"> </span><span class="i18n" data-en="Intelligent Video Analysis based on Big Data" data-ch="大数据智能视频分析"> </span></h5>
+					<p class="i18n" data-en="Apply deep learning to dig the meta information of video to classify the massive video data and  to explore data.At present, the main purpose of the research is to analysis traffic violations, vehicle tracking, pedestrian recognition.In this project, I'm mainly responsible for the study of deep learning algorithm and algorithm application scenarios." data-ch="应用深度学习来挖掘视频的元信息，对于海量视频数据信息进行分类和数据挖掘。目前主要研究智能分析交通违规行为，车辆轨迹追踪，行人动作识别。主要应用于视频监控。个人在该项目中主要负责研究深度学习算法和算法应用场景。"></p>
+					<p class="i18n" data-en="Tech of Project:a certain understanding of linux enviroment programing, algorithm of deep learning, basic c & python programing knowledge, picture process ability." data-ch="项目技术:一定的linux环境编程基础，深度学习算法，和具有c语言python编程基础，图片处理能力。"></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="work-info"> 
+				<div class="col-md-6 work-right work-right2"> 
+					<h4>2014 - 2015 </h4>
+				</div>
+				<div class="col-md-6 work-left work-left2"> 
+					<h5><span class="i18n" data-en="Project Management Project" data-ch="软课题项目管理"> </span><span class="glyphicon glyphicon-briefcase"></span></h5>
+					<p class="i18n" data-en="Simplify the procedure of project application,approval,and management.Inform the up-to-date statement of project in time, and realize the automatic office.Mainly responsible for communicating with clients and design the prototype and architecture of the website according to the needs.Be familiar with B/S model." data-ch="将公司项目申报，审批，管理流程简化以web的形式表示。能够及时的通知项目审核进度，实现办公自动化，业务通告等功能。个人在该项目中主要负责与客户沟通项目需求，根据需求进行网站架构和设计。熟悉前后端技术。"></p>
+					<p class="i18n" data-en="Tech of Project: JavaWeb fundation，application of SSH framework，browser technology(including ajax,jquery), a good understanding of date base." data-ch="项目技术:javaweb基础，主流框架ssh应用，前端技术(ajax,jquery),对于实际问题流程化能力，以及一些对于数据库操作的了解。"></p>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		
+		</div>
+	</div>
+	<!--//project-experience-->
+	<!--education-->
+	<div id="education" class="education">
+		<div class="container">
+			<h3 class="title i18n" data-en="Education" data-ch="教育经历"></h3>
+			<div class="work-info"> 
+				<div class="col-md-6 work-left"> 
+					<h4 class="i18n" data-en="Master Degree in Software engineering- 2014" data-ch="软件工程硕士 - 2014"></h4>
+				</div>
+				<div class="col-md-6 work-right"> 
+					<h5><span class="glyphicon glyphicon-education"> </span><span class="i18n" data-en="Nanjing University of Telcommunication and Post" data-ch="南京邮电大学"> </span></h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="work-info"> 
+				<div class="col-md-6 work-right work-right2"> 
+					<h4 class="i18n" data-en="Diploma in Photoelectric information engineering - 2010" data-ch="光电信息工程本科 - 2010"></h4>
+				</div>
+				<div class="col-md-6 work-left work-left2"> 
+					<h5><span class="i18n" data-en="Nanjing University of Telcommunication and Post, TongDa academy" data-ch="南京邮电大学，通达学院"></span><span class="glyphicon glyphicon-education"></span>
+					</h5>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			
+		</div>
+	</div>
+	<!--//education-->
+	<!--skills-->
+	<div id="skills" class="skills">
+		<div class="container">
+			<h3 class="title i18n" data-en="Skills" data-ch="掌握技能"></h3>
+			<div class="skills-info">
+				<div class="col-md-6 bar-grids">
+					<h6>Java  <span> 90% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 90%">
+						</div>
+					</div>
+					<h6>Algorithm  <span> 80% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 80%">
+						</div>
+					</div>
+					<h6>HTML/CSS<span>70% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 70%">
+						</div>
+					</div>
+					<h6>TCP/IP <span> 70% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 70%">
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 bar-grids">
+					<h6>MYSQL <span> 60% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 60%">
+						</div>
+					</div>
+					<h6>Python<span> 60% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 60%">
+						</div>
+					</div>
+					<h6>Linux & Shell Scripts<span>80% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 80%">
+						</div>
+					</div>
+					<h6>C<span> 80% </span></h6>
+					<div class="progress">
+						<div class="progress-bar progress-bar-striped active" style="width: 80%">
+						</div>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+		</div>
+	</div>
+		<script type="text/javascript">
+		$(document).ready(function() {
+		
+			var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+			};
+			
+			$().UItoTop({ easingType: 'easeOutQuart' });
+			
+		});
+			$('.i18n').each(function() {
+    				$(this).text($(this).data("ch"));
+  				});
+	</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
